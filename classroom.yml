@@ -1,0 +1,401 @@
+name: Autograding Tests
+'on':
+- push
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: test 1a
+      id: test-1a
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 1a
+        setup-command: npm install
+        command: npm run test tests/exercice_1/exercice_1a.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 1b
+      id: test-1b
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 1b
+        setup-command: npm install
+        command: npm run test tests/exercice_1/exercice_1b.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 1c
+      id: test-1c
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 1c
+        setup-command: npm install
+        command: npm run test tests/exercice_1/exercice_1c.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 2a
+      id: test-2a
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 2a
+        setup-command: npm install
+        command: 'npm run test tests/exercice_2/exercice_2a.test.js '
+        timeout: 10
+        max-score: 1
+    - name: test 2b
+      id: test-2b
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 2b
+        setup-command: npm install
+        command: 'npm run test tests/exercice_2/exercice_2b.test.js '
+        timeout: 10
+        max-score: 1
+    - name: test 2c
+      id: test-2c
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 2c
+        setup-command: npm install
+        command: 'npm run test tests/exercice_2/exercice_2c.test.js '
+        timeout: 10
+        max-score: 1
+    - name: test 3a
+      id: test-3a
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 3a
+        setup-command: npm install
+        command: npm run test tests/exercice_3/exercice_3a.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 3b
+      id: test-3b
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 3b
+        setup-command: npm install
+        command: npm run test tests/exercice_3/exercice_3b.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 3c
+      id: test-3c
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 3c
+        setup-command: npm install
+        command: npm run test tests/exercice_3/exercice_3c.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 4a
+      id: test-4a
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 4a
+        setup-command: npm install
+        command: npm run test tests/exercice_4/exercice_4a.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 4b
+      id: test-4b
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 4b
+        setup-command: npm install
+        command: npm run test tests/exercice_4/exercice_4b.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 5a
+      id: test-5a
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 5a
+        setup-command: npm install
+        command: npm run test tests/exercice_5/exercice_5a.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 5b
+      id: test-5b
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 5b
+        setup-command: npm install
+        command: npm run test tests/exercice_5/exercice_5b.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 6a
+      id: test-6a
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 6a
+        setup-command: npm install
+        command: npm run test tests/exercice_6/exercice_6a.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 6b
+      id: test-6b
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 6b
+        setup-command: npm install
+        command: npm run test tests/exercice_6/exercice_6b.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 6c
+      id: test-6c
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 6c
+        setup-command: npm install
+        command: npm run test tests/exercice_6/exercice_6c.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 6d
+      id: test-6d
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 6d
+        setup-command: npm install
+        command: npm run test tests/exercice_6/exercice_6d.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 6e
+      id: test-6e
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 6e
+        setup-command: npm install
+        command: npm run test tests/exercice_6/exercice_6e.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 7a
+      id: test-7a
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 7a
+        setup-command: npm install
+        command: npm run test tests/exercice_7/exercice_7a.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 7b
+      id: test-7b
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 7b
+        setup-command: npm install
+        command: npm run test tests/exercice_7/exercice_7b.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 7c
+      id: test-7c
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 7c
+        setup-command: npm install
+        command: npm run test tests/exercice_7/exercice_7c.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 7d
+      id: test-7d
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 7d
+        setup-command: npm install
+        command: npm run test tests/exercice_7/exercice_7d.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 7e
+      id: test-7e
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 7e
+        setup-command: npm install
+        command: npm run test tests/exercice_7/exercice_7e.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 8a
+      id: test-8a
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 8a
+        setup-command: npm install
+        command: npm run test tests/exercice_8/exercice_8a.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 8b
+      id: test-8b
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 8b
+        setup-command: npm install
+        command: npm run test tests/exercice_8/exercice_8b.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 8c
+      id: test-8c
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 8c
+        setup-command: npm install
+        command: npm run test tests/exercice_8/exercice_8c.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 8d
+      id: test-8d
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 8d
+        setup-command: npm install
+        command: npm run test tests/exercice_8/exercice_8d.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 8e
+      id: test-8e
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 8e
+        setup-command: npm install
+        command: npm run test tests/exercice_8/exercice_8e.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 8f
+      id: test-8f
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 8f
+        setup-command: npm install
+        command: npm run test tests/exercice_8/exercice_8f.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 8g
+      id: test-8g
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 8g
+        setup-command: npm install
+        command: npm run test tests/exercice_8/exercice_8g.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 9a
+      id: test-9a
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 9a
+        setup-command: npm install
+        command: npm run test tests/exercice_9/exercice_9a.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 9b
+      id: test-9b
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 9b
+        setup-command: npm install
+        command: npm run test tests/exercice_9/exercice_9b.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 9c
+      id: test-9c
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 9c
+        setup-command: npm install
+        command: npm run test tests/exercice_9/exercice_9c.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 9d
+      id: test-9d
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 9d
+        setup-command: npm install
+        command: npm run test tests/exercice_9/exercice_9d.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 9e
+      id: test-9e
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 9e
+        setup-command: npm install
+        command: npm run test tests/exercice_9/exercice_9e.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 9f
+      id: test-9f
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 9f
+        setup-command: npm install
+        command: npm run test tests/exercice_9/exercice_9f.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 9g
+      id: test-9g
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 9g
+        setup-command: npm install
+        command: npm run test tests/exercice_9/exercice_9g.test.js
+        timeout: 10
+        max-score: 1
+    - name: test 9h
+      id: test-9h
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: test 9h
+        setup-command: npm install
+        command: npm run test tests/exercice_9/exercice_9h.test.js
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        TEST-1A_RESULTS: "${{steps.test-1a.outputs.result}}"
+        TEST-1B_RESULTS: "${{steps.test-1b.outputs.result}}"
+        TEST-1C_RESULTS: "${{steps.test-1c.outputs.result}}"
+        TEST-2A_RESULTS: "${{steps.test-2a.outputs.result}}"
+        TEST-2B_RESULTS: "${{steps.test-2b.outputs.result}}"
+        TEST-2C_RESULTS: "${{steps.test-2c.outputs.result}}"
+        TEST-3A_RESULTS: "${{steps.test-3a.outputs.result}}"
+        TEST-3B_RESULTS: "${{steps.test-3b.outputs.result}}"
+        TEST-3C_RESULTS: "${{steps.test-3c.outputs.result}}"
+        TEST-4A_RESULTS: "${{steps.test-4a.outputs.result}}"
+        TEST-4B_RESULTS: "${{steps.test-4b.outputs.result}}"
+        TEST-5A_RESULTS: "${{steps.test-5a.outputs.result}}"
+        TEST-5B_RESULTS: "${{steps.test-5b.outputs.result}}"
+        TEST-6A_RESULTS: "${{steps.test-6a.outputs.result}}"
+        TEST-6B_RESULTS: "${{steps.test-6b.outputs.result}}"
+        TEST-6C_RESULTS: "${{steps.test-6c.outputs.result}}"
+        TEST-6D_RESULTS: "${{steps.test-6d.outputs.result}}"
+        TEST-6E_RESULTS: "${{steps.test-6e.outputs.result}}"
+        TEST-7A_RESULTS: "${{steps.test-7a.outputs.result}}"
+        TEST-7B_RESULTS: "${{steps.test-7b.outputs.result}}"
+        TEST-7C_RESULTS: "${{steps.test-7c.outputs.result}}"
+        TEST-7D_RESULTS: "${{steps.test-7d.outputs.result}}"
+        TEST-7E_RESULTS: "${{steps.test-7e.outputs.result}}"
+        TEST-8A_RESULTS: "${{steps.test-8a.outputs.result}}"
+        TEST-8B_RESULTS: "${{steps.test-8b.outputs.result}}"
+        TEST-8C_RESULTS: "${{steps.test-8c.outputs.result}}"
+        TEST-8D_RESULTS: "${{steps.test-8d.outputs.result}}"
+        TEST-8E_RESULTS: "${{steps.test-8e.outputs.result}}"
+        TEST-8F_RESULTS: "${{steps.test-8f.outputs.result}}"
+        TEST-8G_RESULTS: "${{steps.test-8g.outputs.result}}"
+        TEST-9A_RESULTS: "${{steps.test-9a.outputs.result}}"
+        TEST-9B_RESULTS: "${{steps.test-9b.outputs.result}}"
+        TEST-9C_RESULTS: "${{steps.test-9c.outputs.result}}"
+        TEST-9D_RESULTS: "${{steps.test-9d.outputs.result}}"
+        TEST-9E_RESULTS: "${{steps.test-9e.outputs.result}}"
+        TEST-9F_RESULTS: "${{steps.test-9f.outputs.result}}"
+        TEST-9G_RESULTS: "${{steps.test-9g.outputs.result}}"
+        TEST-9H_RESULTS: "${{steps.test-9h.outputs.result}}"
+      with:
+        runners: test-1a,test-1b,test-1c,test-2a,test-2b,test-2c,test-3a,test-3b,test-3c,test-4a,test-4b,test-5a,test-5b,test-6a,test-6b,test-6c,test-6d,test-6e,test-7a,test-7b,test-7c,test-7d,test-7e,test-8a,test-8b,test-8c,test-8d,test-8e,test-8f,test-8g,test-9a,test-9b,test-9c,test-9d,test-9e,test-9f,test-9g,test-9h
